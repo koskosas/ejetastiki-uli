@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Προπονητική — Study Guide ΤΕΦΑΑ 4ο Εξάμηνο</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f4f4f0; color: #1a1a1a; }
+  header { background: #1a2e4a; color: white; padding: 1.5rem 2rem; }
+  header h1 { font-size: 22px; font-weight: 600; }
+  header p { font-size: 13px; color: #a0b4c8; margin-top: 4px; }
+  .tabs { display: flex; gap: 0; background: #1a2e4a; padding: 0 2rem; overflow-x: auto; }
+  .tab { padding: 10px 18px; font-size: 13px; cursor: pointer; color: #a0b4c8; border-bottom: 3px solid transparent; white-space: nowrap; transition: all 0.15s; }
+  .tab:hover { color: white; }
+  .tab.active { color: #7dd3fc; border-bottom-color: #7dd3fc; }
+  .content { max-width: 860px; margin: 2rem auto; padding: 0 1.5rem 3rem; }
+  .section { display: none; }
+  .section.active { display: block; }
+  .section-title { font-size: 20px; font-weight: 600; margin-bottom: 1.5rem; color: #1a2e4a; border-left: 4px solid #3b82f6; padding-left: 12px; }
+  .qa-block { background: white; border-radius: 10px; margin-bottom: 10px; border: 1px solid #e5e7eb; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+  .qa-q { padding: 14px 18px; font-size: 14px; font-weight: 500; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+  .qa-q:hover { background: #f8faff; }
+  .arrow { color: #6b7280; font-size: 18px; transition: transform 0.2s; flex-shrink: 0; }
+  .qa-block.open .arrow { transform: rotate(90deg); }
+  .qa-a { display: none; padding: 12px 18px 16px; font-size: 13.5px; line-height: 1.75; border-top: 1px solid #e5e7eb; background: #f9fafb; color: #374151; }
+  .qa-block.open .qa-a { display: block; }
+  .correct { display: inline-block; background: #d1fae5; color: #065f46; border-radius: 6px; padding: 3px 10px; font-size: 12px; font-weight: 600; margin-bottom: 8px; }
+  .wrong { display: inline-block; background: #fee2e2; color: #991b1b; border-radius: 6px; padding: 3px 10px; font-size: 12px; font-weight: 600; margin-bottom: 8px; }
+  .badge-sep { background: #fee2e2; color: #991b1b; border-radius: 6px; padding: 2px 8px; font-size: 11px; font-weight: 600; margin-right: 6px; }
+  .badge-ioun { background: #dbeafe; color: #1e40af; border-radius: 6px; padding: 2px 8px; font-size: 11px; font-weight: 600; margin-right: 6px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin-top: 6px; }
+  th { background: #1a2e4a; color: white; padding: 8px 12px; text-align: left; font-weight: 500; }
+  td { padding: 7px 12px; border-bottom: 1px solid #e5e7eb; }
+  tr:nth-child(even) td { background: #f9fafb; }
+  .table-wrap { overflow-x: auto; border-radius: 8px; border: 1px solid #e5e7eb; margin-top: 8px; }
+  .sub-title { font-size: 15px; font-weight: 600; color: #1a2e4a; margin: 1.5rem 0 8px; }
+  ul { padding-left: 18px; }
+  ul li { margin-bottom: 4px; font-size: 13.5px; line-height: 1.7; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Προπονητική — Study Guide</h1>
+  <p>ΤΕΦΑΑ Κομοτηνής · 4ο Εξάμηνο · Ιούνιος 2025</p>
+</header>
+
+<div class="tabs">
+  <div class="tab active" onclick="showTab('antoxh',this)">Αντοχή</div>
+  <div class="tab" onclick="showTab('dynamh',this)">Δύναμη</div>
+  <div class="tab" onclick="showTab('taxythta',this)">Ταχύτητα</div>
+  <div class="tab" onclick="showTab('pleiom',this)">Πλειομετρική</div>
+  <div class="tab" onclick="showTab('periodismos',this)">Περιοδισμός</div>
+  <div class="tab" onclick="showTab('proetherm',this)">Προθέρμανση</div>
+  <div class="tab" onclick="showTab('themata',this)">Θέματα Εξετάσεων</div>
+  <div class="tab" onclick="showTab('pinakes',this)">Πίνακες</div>
+</div>
+
+<div class="content">
+
+<!-- ===== ΑΝΤΟΧΗ ===== -->
+<div id="antoxh" class="section active">
+  <div class="section-title">Αντοχή</div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Μορφές εμφάνισης αντοχής <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Απάντηση</span><br>
+    1. Φάση ανοδρόμης &nbsp;·&nbsp; 2. Θετικής επιτάχυνσης &nbsp;·&nbsp; 3. Σταθερή ταχύτητα &nbsp;·&nbsp; 4. Φάση μείωσης ταχύτητας</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Μέθοδοι προπόνησης αντοχής — πλήρης λίστα <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Απάντηση</span><br>
+    <ul>
+      <li><strong>Α:</strong> Διάρκεια με σταθερή ταχύτητα</li>
+      <li><strong>Β:</strong> Διάρκεια με μεταβαλλόμενη ταχύτητα</li>
+      <li><strong>LSD (βραχέων αποστάσεων):</strong> 1-2φ/εβδ. · 30-120' · ~70% VOmax</li>
+      <li><strong>Tempo/Ρυθμός:</strong> 1-2φ/εβδ. · ~20-30' · στο κατώφλι γαλακτικού</li>
+      <li><strong>Διαλ. υψηλής έντασης (HIIT):</strong> 1φ/εβδ. · 30-60sec · μεγαλύτερο VOmax</li>
+      <li><strong>Διαλειμματική:</strong> 1-2φ/εβδ. · 3-5 λεπτά · κοντά VOmax</li>
+      <li><strong>Fartlek:</strong> 1φ/εβδ. · 30-60' · μεταξύ tempo &amp; LSD</li>
+    </ul></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Επιδράσεις αντοχής εξαρτώνται από... (6 παράγοντες) <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Α, Β, Γ, Δ, Ε, ΣΤ</span><br>
+    1. Οικονομία τεχνικής &nbsp;·&nbsp; 2. Ενεργειακό αεροβικό &nbsp;·&nbsp; 3. Ικανότητα πρόσληψης οξυγόνου &nbsp;·&nbsp; 4. Ιδανικό σωματικό βάρος &nbsp;·&nbsp; 5. Διάφοροι μηχανισμοί παράγοντες &nbsp;·&nbsp; 6. Θέληση διατήρησης απόδοσης μεγάλο χρονικό διάστημα</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Μορφές εμφάνισης αντοχής (χρονικά) <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Απάντηση</span><br>
+    Μικρού (35sec – 2min) &nbsp;·&nbsp; Μεσαίου (2-10min) &nbsp;·&nbsp; Μακρού (10-360min)</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Τι προκύπτει από πρόγραμμα αερόβιας αντοχής; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Απάντηση</span><br>
+    1. Αύξηση παροχής οξυγόνου στους ιστούς<br>
+    2. Υψηλότερος ρυθμός αερόβιας παραγωγής ενέργειας<br>
+    3. Μεγαλύτερη χρήση λίπους ως πηγή ενέργειας</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ποιος τύπος προπόνησης στο κατώφλι γαλακτικού; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Προπόνηση ρυθμού / tempo</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ποια μέθοδος για τον ισοτροπικό και τη ρύθμιση έντασης; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Καρδιακή συχνότητα</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Η απώλεια φυσιολογικών προσαρμογών μετά λήξη προπόνησης είναι παράδειγμα... <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Αποπροπόνησης</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ποια προπονητική περίοδος εκτελούνται δόσεις αντοχής με μεγαλύτερη διάρκεια; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Μεταβατική περίοδος</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Οι Δυναμικές Συστάσεις θεωρούνται ως... <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Είδική προθέρμανση</span></div>
+  </div>
+</div>
+
+<!-- ===== ΔΥΝΑΜΗ ===== -->
+<div id="dynamh" class="section">
+  <div class="section-title">Δύναμη</div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Χαρακτηριστικά μεθόδων καθορισμού έντασης προπόνησης εκμάθησης τεχνικής <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Απάντηση</span><br>
+    1. Εκτέλεση <em>χωρίς</em> πλήρη ενεργοποίηση δύναμης, αλλά ακριβής εκτέλεση κινηματικών χαρακτηριστικών &amp; δυνατότητα συρρύθμισης<br>
+    2. Εκτέλεση <em>με</em> πλήρη ενεργοποίηση δύναμης για τη δημιουργία κινητικού προτύπου<br>
+    3. Εκτέλεση κάτω από μεγαλύτερη πίεση χρόνου</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Αθλητής 205cm / 104kg — επιλέγει άλμα βάθους από κουτί 80cm. Η επιλογή είναι... <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="wrong">✗ ΛΑΘΟΣ</span><br>
+    Πολύ βαρύς/ψηλός αθλητής για κουτί 80cm· κίνδυνος τραυματισμού</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Σε πρόγραμμα ανάπτυξης αντιδραστικής δύναμης ο στόχος είναι; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Γ — Βελτίωση νευρομυϊκής συνεργασίας</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Βέλτιστη δύναμη: με ποια προγράμματα βελτιώνεται; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Απάντηση</span><br>
+    1. Μυϊκής υπερτροφίας &nbsp;·&nbsp; 2. Νευρομυϊκής συνεργασίας &nbsp;·&nbsp; 3. Αντοχής στη δύναμη</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ποια τεχνική μέθοδος μειώνει χαλάρωση μυϊκής αντοχής; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Στάσιμη (στατική)</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Διαφορά Επαναληπτικής (Ε) και Συνδυαστικής (Α) μεθόδου <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Απάντηση</span><br>
+    Στην <strong>Ε</strong>: το 5-άλειμμα ΔΕΝ είναι πλήρες<br>
+    Στη <strong>Α</strong>: είναι πλήρες</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Η ένταση στην προπόνηση δύναμης αξιολογείται με βάση... <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ 4 (Γ, Α)</span><br>
+    1. Τη μέγιστη επανάληψη (1RM)<br>
+    2. Την αυτοαξιολόγηση ώθησης και τον τρόπο διεξαγωγής της άσκησης</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ποιους από τους παράγοντες πρέπει να αξιολογήσεις για ένταξη αθλητή σε πρόγραμμα εκκίνησης με υψηλή ένταση; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ 1) Ισορροπία &nbsp; 2) Ταχύτητα &nbsp; 3) Δύναμη</span></div>
+  </div>
+</div>
+
+<!-- ===== ΤΑΧΥΤΗΤΑ ===== -->
+<div id="taxythta" class="section">
+  <div class="section-title">Ταχύτητα &amp; Ευκινησία</div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Τοποθέτηση προπόνησης ταχύτητας ΜΕΤΑ από αερόβια αντοχή — Σωστό ή Λάθος; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="wrong">✗ ΛΑΘΟΣ</span><br>
+    Η ταχύτητα τοποθετείται <strong>ΠΡΙΝ</strong> την αερόβια αντοχή</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Μορφές εμφάνισης ταχύτητας <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Απάντηση</span><br>
+    1. Φάση ανοδρόμης &nbsp;·&nbsp; 2. Θετική επιτάχυνση &nbsp;·&nbsp; 3. Σταθεροποίηση ταχύτητας &nbsp;·&nbsp; 4. Φάση μείωσης ταχύτητας</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Μέθοδοι προπόνησης εφαρμογής τεχνικής <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ 3 (β, γ, ε, α)</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Στο ορθό σπρίντ, μήκος διασκελισμού εξαρτάται από... <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ i — Μέγεθος κατακόρυφης δύναμης κατά τη φάση στήριξης</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Τι απαιτεί έναρξη όταν σκοπός είναι βελτίωση ικανότητας αλλαγής κατεύθυνσης; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Εισαγωγή λήψης</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Αθλητής ταχύτητας — δοκιμάζει 1000m. Ο προπονητής διαπιστώνει μείωση επίδοσης στα 10m κατά την 3η περίοδο. Ποια μέθοδος; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Εύτακτη Διαλειμματική</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Αναφέρατε τις μορφές εμφάνισης ταχύτητας <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Απάντηση</span><br>
+    1. Φάση ανοδρόμης &nbsp;·&nbsp; 2. Θετική επιτάχυνση &nbsp;·&nbsp; 3. Σταθεροποίηση ταχύτητας &nbsp;·&nbsp; 4. Φάση μείωσης ταχύτητας</div>
+  </div>
+</div>
+
+<!-- ===== ΠΛΕΙΟΜΕΤΡΙΚΗ ===== -->
+<div id="pleiom" class="section">
+  <div class="section-title">Πλειομετρική Προπόνηση</div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Περιγραφή μεθόδου PNF <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Απάντηση</span><br>
+    Η PNF είναι τεχνική σύστασης με πλαστική σύσταση και ισομερική βοήθεια. Η πιο γνωστή μορφή: <strong>σύσταση → χαλάρωση → παλλακτική</strong>.<br><br>
+    1. Παλλακτική σύσταση του μυός: <strong>10-15 δευτερόλεπτα</strong><br>
+    2. Ισομερική σύνθεση (χωρίς κίνηση): <strong>6-10 δευτερόλεπτα</strong><br>
+    3. Χαλάρωση + παλλακτική σύσταση: <strong>15-30 δευτερόλεπτα</strong><br><br>
+    Εφαρμόζεται στην προπόνηση και τη φυσικοθεραπεία.</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Μετά διάταση PNF κράτημα-χαλάρωση: ποιο εξηγεί αύξηση ευλυγισίας; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Αυτογενής αναστολή + Αμοιβαία αναστολή</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ποιος τύπος πλειομετρικής θεωρείται ο πιο έντονος; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Αναπηδήσεις στο ένα πόδι</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Παράγοντες για ένταξη αθλητή σε πλειομετρική <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Δ — i, ii, iii, iv</span><br>
+    Ισορροπία · Ταχύτητα · Δύναμη · Άλιπη σωματική μάζα</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Πλάγιος ποδοσφαιριστής — καλύτερη σειρά ασκήσεων για εκρηκτική ικανότητα <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ iv — πιέσεις ποδιών σε μηχάνημα με κλίση, στριγμό, κάμψεις γονάτων, οπισθοκάθισμα</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Αναλογία έργου/διαλείμματος για πλειομετρική <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ 1:4 (ή 1:3 έως 1:5)</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Δρομέας μικρών αποστάσεων — επανένταξη μετά τραυματισμό οπίσθιων μηριαίων <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Απάντηση</span><br>
+    <strong>Πριν:</strong> Στατικές/στάσεις διατάσεις<br>
+    <strong>Μετά:</strong> PNF και παθητικές ασκήσεις</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ποια ποσότητα έχει ικανότητα να αυξήσει περισσότερο μυϊκή δύναμη; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ 5 sec των 5 επαναλήψεων</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Η κέλεφρη των μυϊκών ακρωτηρίων προκαλεί... <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Σύσταση του μυός που έχει διαταθεί</span></div>
+  </div>
+</div>
+
+<!-- ===== ΠΕΡΙΟΔΙΣΜΟΣ ===== -->
+<div id="periodismos" class="section">
+  <div class="section-title">Περιοδισμός Προπόνησης</div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Σημαντικότερα στοιχεία επιβάρυνσης για περιοδισμό <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Δ — i, ii, iii, iv, v (όλα)</span><br>
+    Ένταση · Ποσότητα · Πυκνότητα · Τρόπος διεξαγωγής · Διάρκεια</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Αθλητική περίοδος → Προπονητική περίοδος προετοιμασίας σε ομαδικά <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Περίοδος προετοιμασίας</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Κατά ποια περίοδο εξαιρούνται μονάδες αερόβιας αντοχής με μεγαλύτερη διάρκεια; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Β — Περίοδος προετοιμασίας</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ο μικρόκυκλος είναι... <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Α (ό,τι) — Το εβδομαδιαίο πλαίσιο</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Κατά αγωνιστική περίοδο... <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Β — αυξάνεται η ένταση, μειώνεται η ποσότητα</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Πυκνότητα προπόνησης ταχύτητας <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ 2 (Β, Γ)</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Συχνότητα προπόνησης με αποστάσεις ανά περίοδο <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Απάντηση</span><br>
+    Μεταβατική: 4-6 φορές/εβδ.<br>
+    Προετοιμασίας: 3-4 φορές/εβδ.<br>
+    Αγωνιστική: 1-3 φορές/εβδ.</div>
+  </div>
+</div>
+
+<!-- ===== ΠΡΟΘΕΡΜΑΝΣΗ ===== -->
+<div id="proetherm" class="section">
+  <div class="section-title">Προθέρμανση &amp; Γενικά</div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ποιο από τα παρακάτω ΔΕΝ σχετίζεται με τη θερμοκρασία; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ ii — Διαταραχή παροδικών δεσμών συνδετικού ιστού</span><br>
+    (τα υπόλοιπα: ενισχυμένη νευρική λειτουργία, αύξηση κατανάλωσης οξυγόνου, αύξηση θερμοκρασίας μυών — όλα σχετίζονται με θερμοκρασία)</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Οι Δυναμικές Συστάσεις θεωρούνται ως... <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Είδική προθέρμανση</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Τι δεν αποτελεί ρόλο του ώμου Βρακνιακής; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Η ισορροπία</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Αθλητής ποδοσφαίρου — ο προπονητής παρατηρεί ότι δεν είναι ικανός σε δρόμους 20cm αλλά δεν είναι ικανός σε δακτυλιαίες εικονικές. Είναι πιθανό αυτό; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ ΟΧΙ — Δεν είναι πιθανό αυτό</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Με ποια μεθόδους πρέπει να προπονείται ο δρομέας ΠΡΙΝ και ΜΕΤΑ την προπόνηση του; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Απάντηση</span><br>
+    <strong>Πριν:</strong> Στατικές διατάσεις<br>
+    <strong>Μετά:</strong> PNF και παθητικές</div>
+  </div>
+</div>
+
+<!-- ===== ΘΕΜΑΤΑ ΕΞΕΤΑΣΕΩΝ ===== -->
+<div id="themata" class="section">
+  <div class="section-title">Θέματα Εξετάσεων με Απαντήσεις</div>
+
+  <div style="display:flex;gap:8px;margin-bottom:1.5rem;flex-wrap:wrap;align-items:center">
+    <span class="badge-ioun">Ιούνιος 2025</span>
+    <span class="badge-sep">Σεπτέμβριος 2024</span>
+  </div>
+
+  <div class="sub-title"><span class="badge-ioun">Ιούνιος 2025</span></div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ερ. 1 — Ομάδα ποδοσφαίρου: μετάβαση μεταβατική → προετοιμασίας <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ ii — Μην αλλάζετε τη συχνότητα και προσθέστε πλειομετρικές ασκήσεις</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ερ. 2 — Αναλογία έργου/διαλείμματος για πλειομετρική <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ ii — 1:4</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ερ. 3 — Ορθό σπρίντ: μήκος διασκελισμού <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ i — Μέγεθος κατακόρυφης δύναμης κατά τη φάση στήριξης</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ερ. 4 — Ταχύτητα ΠΡΙΝ ή ΜΕΤΑ αντοχή; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="wrong">✗ ΛΑΘΟΣ</span><br>
+    Η ταχύτητα τοποθετείται ΠΡΙΝ την αερόβια αντοχή</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ερ. 5 — Χαρακτηριστικά επιβάρυνσης <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Δ — i, ii, iii, iv, v (όλα)</span><br>
+    Τρόπος διεξαγωγής · Ποσότητα · Ένταση · Διάρκεια · Πυκνότητα</div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ερ. 6 — Αθλήτρια τριάθλου: 3 σετ/15 επαν. — βέλτιστο διάλειμμα <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ ii — 1,5 λεπτό</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ερ. 7 — Ένταση ίση με κατώφλι γαλακτικού <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ i — Προπόνηση ρυθμού/tempo</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ερ. 8 — Παράγοντες πριν πλειομετρική κάτω μέρους <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Δ — Ισορροπία, δύναμη, ιστορικό, άλιπη μάζα (όλα)</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ερ. 9 — Αποτέλεσμα προθέρμανσης που ΔΕΝ σχετίζεται με θερμοκρασία <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ ii — Διαταραχή παροδικών δεσμών συνδετικού ιστού</span></div>
+  </div>
+
+  <div class="sub-title" style="margin-top:2rem"><span class="badge-sep">Σεπτέμβριος 2024</span></div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ερ. 1 — Σημαντικότερα στοιχεία επιβάρυνσης για περιοδισμό <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Α (i, iii) — Ένταση, Πυκνότητα</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ερ. 2 — Αποτέλεσμα προθέρμανσης που ΔΕΝ σχετίζεται με θερμοκρασία <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ iii — Αύξηση βασικής κατανάλωσης οξυγόνου</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ερ. 3 — Ομάδα ποδοσφαίρου: αλλαγή συχνότητας προπόνησης μεταβατική → προετοιμασίας <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ ii — Μην αλλάζετε + προσθέστε πλειομετρικές</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ερ. 4 — Παράγοντες για πλειομετρική <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Δ — i, ii, iii, iv</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ερ. 5 — Πλάγιος ποδοσφαιριστής: βέλτιστη σειρά ασκήσεων <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ iv — πιέσεις ποδιών με κλίση, στριγμό, κάμψεις γονάτων, οπισθοκάθισμα</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ερ. 6 — Πιο έντονος τύπος πλειομετρικής <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ ii — Αναπηδήσεις στο ένα πόδι</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ερ. 7 — PNF κράτημα-χαλάρωση: αύξηση ευλυγισίας <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="correct">✓ Αυτογενής αναστολή + Αμοιβαία αναστολή</span></div>
+  </div>
+
+  <div class="qa-block">
+    <div class="qa-q" onclick="tog(this)">Ερ. 16 — Μεταβατική περίοδος: ταχύτητα τοποθετείται ΜΕΤΑ αντοχή; <span class="arrow">›</span></div>
+    <div class="qa-a"><span class="wrong">✗ Β — ΛΑΘΟΣ</span></div>
+  </div>
+</div>
+
+<!-- ===== ΠΙΝΑΚΕΣ ===== -->
+<div id="pinakes" class="section">
+  <div class="section-title">Πίνακες Αναφοράς</div>
+
+  <div class="sub-title">% 1RM — Σκοπός</div>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Σκοπός</th><th>% 1RM</th><th>Στόχος επαναλήψεων</th><th>Σετ</th></tr>
+      <tr><td>Δύναμη (βασικές ασκήσεις)</td><td>≥85</td><td>≤6</td><td>2-6</td></tr>
+      <tr><td>Δύναμη / Υπερτροφία / Δύναμη</td><td>80-90 / 75-85</td><td>1-2 / 3-5</td><td>3-5</td></tr>
+      <tr><td>Υπερτροφία</td><td>67-85</td><td>6-12</td><td>3-6</td></tr>
+      <tr><td>Μυϊκή αντοχή</td><td>≤67</td><td>≥12</td><td>2-3</td></tr>
+    </table>
+  </div>
+
+  <div class="sub-title" style="margin-top:1.5rem">Αερόβια Αντοχή — Μέθοδοι</div>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Μέθοδος</th><th>Συχνότητα/εβδ.</th><th>Διάρκεια</th><th>Ένταση</th></tr>
+      <tr><td>LSD (βραχέων αποστ.)</td><td>1-2φ</td><td>30-120'</td><td>~70% VOmax</td></tr>
+      <tr><td>Tempo / Ρυθμός</td><td>1-2φ</td><td>~20-30'</td><td>Κατώφλι γαλακτικού</td></tr>
+      <tr><td>Διαλ. υψηλής έντασης (HIIT)</td><td>1φ</td><td>30-60 sec</td><td>Μεγαλύτερο VOmax</td></tr>
+      <tr><td>Διαλειμματική</td><td>1-2φ</td><td>3-5 λεπτά</td><td>Κοντά VOmax</td></tr>
+      <tr><td>Fartlek</td><td>1φ</td><td>30-60 λεπτά</td><td>Μεταξύ tempo-LSD</td></tr>
+    </table>
+  </div>
+
+  <div class="sub-title" style="margin-top:1.5rem">Παράμετροι Προπόνησης ανά Ιδιότητα (από Σεπτ 2024 — Ερ. 16)</div>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Ιδιότητα</th><th>Μέθοδος</th><th>Ένταση</th><th>Σετ × Επαναλήψεις</th><th>Διάλειμμα</th><th>Διάρκεια</th></tr>
+      <tr><td>Αντοχή</td><td>Μέτρια Διαλ.</td><td>Μεσαία-υψηλή</td><td>4-6 σετ, 1-2 επαν.</td><td>2-3 λεπτά</td><td>20-30'</td></tr>
+      <tr><td>Δύναμη</td><td>Αντοχή στη δύναμη</td><td>Μέτρια</td><td>3-4 σετ, 12-15 επαν.</td><td>1-2 λεπτά</td><td>45-60'</td></tr>
+      <tr><td>Ταχύτητα</td><td>Έντονη Διαλ.</td><td>Υψηλή</td><td>6-8 σετ, 10-15 επαν.</td><td>30-60 δευτ.</td><td>15-20'</td></tr>
+      <tr><td>Ευλυγισία</td><td>Δυναμικές</td><td>Μέτρια</td><td>3-4 σετ, 15-20 επαν.</td><td>1 λεπτό</td><td>20-30'</td></tr>
+    </table>
+  </div>
+
+  <div class="sub-title" style="margin-top:1.5rem">Συχνότητα Αντοχής ανά Περίοδο</div>
+  <div class="table-wrap">
+    <table>
+      <tr><th>Περίοδος</th><th>Φορές/εβδ.</th></tr>
+      <tr><td>Μεταβατική</td><td>4-6</td></tr>
+      <tr><td>Προετοιμασίας</td><td>3-4</td></tr>
+      <tr><td>Αγωνιστική</td><td>1-3</td></tr>
+    </table>
+  </div>
+</div>
+
+</div><!-- /content -->
+
+<script>
+function showTab(id, el) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  el.classList.add('active');
+}
+function tog(el) {
+  el.closest('.qa-block').classList.toggle('open');
+}
+</script>
+
+</body>
+</html>
